@@ -9,7 +9,7 @@ const UseWeather: () => IUseWeatherReturn = () => {
     const searchHandler = async (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter") {
             try {
-                const data = await getWeatherService(query);
+                const {data} = await getWeatherService(query);
                 setWeather(data);
                 setQuery("");
             } catch (e) {
